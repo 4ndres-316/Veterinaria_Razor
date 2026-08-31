@@ -1,47 +1,53 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 
 namespace gestion_veterinaria.Pages
 {
     public class MascotasModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly DataStore _store;
 
-        public MascotasModel(ApplicationDbContext context)
+        public MascotasModel(DataStore store)
         {
-            _context = context;
+            _store = store;
         }
 
         [BindProperty]
-        public Mascota Mascota { get; set; }
+        public Mascota Mascota { get; set; } = new();
 
-        public SelectList PropietariosSelectList { get; set; }
+        public SelectList PropietariosSelectList { get; set; } = new(new List<object>());
 
-        public async Task OnGetAsync()
+        public void OnGet()
         {
-            await CargarPropietariosAsync();
+            CargarPropietarios();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
+            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
+            {
+                Console.WriteLine(error.ErrorMessage);
+            }
             if (!ModelState.IsValid)
             {
-                await CargarPropietariosAsync();
+                CargarPropietarios();
                 return Page();
             }
 
-            _context.Mascotas.Add(Mascota);
-            await _context.SaveChangesAsync();
+            Mascota.Id = _store.SiguienteMascotaId();
+            _store.Mascotas.Add(Mascota);
 
             return RedirectToPage("./Index");
         }
 
-        private async Task CargarPropietariosAsync()
+        private void CargarPropietarios()
         {
-            var propietarios = await _context.Propietarios
+            var propietarios = _store.Propietarios
                 .Where(p => p.Estado == EstadoPropietario.Activo)
-                .ToListAsync();
+                .ToList();
 
             PropietariosSelectList = new SelectList(propietarios, "Id", "Nombre");
         }

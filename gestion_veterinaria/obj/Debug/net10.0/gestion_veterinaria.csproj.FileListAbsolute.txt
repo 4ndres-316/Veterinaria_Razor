@@ -21,7 +21,6 @@ C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\ob
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\scopedcss\bundle\gestion_veterinaria.styles.css
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\scopedcss\projectbundle\gestion_veterinaria.bundle.scp.css
-C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\compressed\02v4oib4u4-{0}-b9sayid5wm-b9sayid5wm.gz
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\compressed\fe0z1d9164-{0}-61n19gt1b8-61n19gt1b8.gz
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\compressed\b0aeunofci-{0}-xtxxf3hu2r-xtxxf3hu2r.gz
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\compressed\6ppj8op6hr-{0}-bqjiyaj88i-bqjiyaj88i.gz
@@ -96,3 +95,5 @@ C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\ob
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\gestion_veterinaria.pdb
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\gestion_veterinaria.genruntimeconfig.cache
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\ref\gestion_veterinaria.dll
+C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\gestion_veterinaria.sourcelink.json
+C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\compressed\02v4oib4u4-{0}-pgroxq1c5z-pgroxq1c5z.gz

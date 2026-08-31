@@ -1,7 +1,10 @@
+using gestion_veterinaria.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+builder.Services.AddSingleton<DataStore>();
 
 var app = builder.Build();
 

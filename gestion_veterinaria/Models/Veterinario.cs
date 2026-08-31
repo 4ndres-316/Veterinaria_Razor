@@ -2,7 +2,7 @@
 
 namespace gestion_veterinaria.Models
 {
-    public class Propietario
+    public class Veterinario
     {
         public int Id { get; set; }
 
@@ -10,14 +10,13 @@ namespace gestion_veterinaria.Models
         public string Nombre { get; set; } = string.Empty;
 
         [Required]
-        public string Apellido { get; set; } = string.Empty;
+        public string Apellidos { get; set; } = string.Empty;
+
+        public string Especialidad { get; set; } = string.Empty;
 
         [Phone]
         public string Telefono { get; set; } = string.Empty;
 
-        [EmailAddress]
-        public string Email { get; set; } = string.Empty;
-
-        public EstadoPropietario Estado { get; set; }
+        public EstadoVeterinario Estado { get; set; }
     }
 }

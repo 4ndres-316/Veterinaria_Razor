@@ -100,3 +100,43 @@ textarea.form-control {
 .btn-primary:hover {
     background-color: #0b5ed7;
 }
+
+.list-container {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 20px 25px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.list-container h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.table-list {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-list th,
+.table-list td {
+    text-align: left;
+    padding: 8px 10px;
+    border-bottom: 1px solid #eee;
+    font-size: 0.9rem;
+
+}
+
+.table-list th {
+    color: #666;
+    font-weight: 600;
+}
+
+.table-list select {
+    padding: 4px 6px;
+    font-size: 0.85rem;
+}

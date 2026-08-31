@@ -1,52 +1,60 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 
 namespace gestion_veterinaria.Pages
 {
     public class CitasModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly DataStore _store;
 
-        public CitasModel(ApplicationDbContext context)
+        public CitasModel(DataStore store)
         {
-            _context = context;
+            _store = store;
         }
 
         [BindProperty]
-        public Cita Cita { get; set; }
+        public Cita Cita { get; set; } = new();
 
-        public SelectList MascotasSelectList { get; set; }
-        public SelectList VeterinariosSelectList { get; set; }
+        public SelectList MascotasSelectList { get; set; } = new(new List<object>());
+        public SelectList VeterinariosSelectList { get; set; } = new(new List<object>());
 
-        public async Task OnGetAsync()
+        public void OnGet()
         {
-            await CargarCombosAsync();
+            CargarCombos();
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
-                await CargarCombosAsync();
+                CargarCombos();
                 return Page();
             }
 
-            _context.Citas.Add(Cita);
-            await _context.SaveChangesAsync();
+            // Si el estado no es Completada, no debería tener diagnóstico guardado
+            if (Cita.Estado != EstadoCita.Completada)
+            {
+                Cita.Diagnostico = string.Empty;
+            }
+
+            Cita.Id = _store.SiguienteCitaId();
+            _store.Citas.Add(Cita);
 
             return RedirectToPage("./Index");
         }
 
-        private async Task CargarCombosAsync()
+        private void CargarCombos()
         {
-            var mascotas = await _context.Mascotas
+            var mascotas = _store.Mascotas
                 .Where(m => m.Estado == EstadoMascota.Activo)
-                .ToListAsync();
+                .ToList();
 
-            var veterinarios = await _context.Veterinarios
+            var veterinarios = _store.Veterinarios
                 .Where(v => v.Estado == EstadoVeterinario.Activo)
-                .ToListAsync();
+                .ToList();
 
             MascotasSelectList = new SelectList(mascotas, "Id", "Nombre");
             VeterinariosSelectList = new SelectList(veterinarios, "Id", "Nombre");

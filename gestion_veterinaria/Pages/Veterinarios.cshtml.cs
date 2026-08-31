@@ -1,33 +1,35 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 
 namespace gestion_veterinaria.Pages
 {
     public class VeterinariosModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly DataStore _store;
 
-        public VeterinariosModel(ApplicationDbContext context)
+        public VeterinariosModel(DataStore store)
         {
-            _context = context;
+            _store = store;
         }
 
         [BindProperty]
-        public Veterinario Veterinario { get; set; }
+        public Veterinario Veterinario { get; set; } = new();
 
         public void OnGet()
         {
         }
 
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            _context.Veterinarios.Add(Veterinario);
-            await _context.SaveChangesAsync();
+            Veterinario.Id = _store.SiguienteVeterinarioId();
+            _store.Veterinarios.Add(Veterinario);
 
             return RedirectToPage("./Index");
         }

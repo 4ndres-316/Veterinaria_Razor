@@ -1,4 +1,3 @@
-wwwroot\css\site.css
 wwwroot\favicon.ico
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -61,7 +60,7 @@ wwwroot\lib\jquery\dist\jquery.slim.js
 wwwroot\lib\jquery\dist\jquery.slim.min.js
 wwwroot\lib\jquery\dist\jquery.slim.min.map
 wwwroot\lib\jquery\LICENSE.txt
-C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\css\site.css
+wwwroot\css\site.css
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\favicon.ico
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\js\site.js
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.css
@@ -123,3 +122,4 @@ C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\ww
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\lib\jquery\dist\jquery.slim.min.js
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\lib\jquery\dist\jquery.slim.min.map
 C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\lib\jquery\LICENSE.txt
+C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\wwwroot\css\site.css

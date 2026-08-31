@@ -1,10 +1,117 @@
 ﻿@page
-@model IndexModel
+@model gestion_veterinaria.Pages.IndexModel
+@using gestion_veterinaria.Models
 @{
-    ViewData["Title"] = "Home page";
+    ViewData["Title"] = "Inicio";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="list-container">
+    <h2>Propietarios</h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Teléfono</th>
+                <th>Email</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var p in Model.Propietarios)
+            {
+                <tr>
+                    <td>@p.Nombre</td>
+                    <td>@p.Apellido</td>
+                    <td>@p.Telefono</td>
+                    <td>@p.Email</td>
+                    <td>
+                        <form method="post" asp-page-handler="CambiarEstadoPropietario">
+                            <input type="hidden" name="id" value="@p.Id" />
+                            <select name="nuevoEstado" class="form-control" onchange="this.form.submit()">
+                                @foreach (EstadoPropietario e in Enum.GetValues(typeof(EstadoPropietario)))
+                                {
+                                    <option value="@e" selected="@(e == p.Estado)">@e</option>
+                                }
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="list-container">
+    <h2>Mascotas</h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Especie</th>
+                <th>Raza</th>
+                <th>Propietario</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var m in Model.Mascotas)
+            {
+                <tr>
+                    <td>@m.Nombre</td>
+                    <td>@m.Especie</td>
+                    <td>@m.Raza</td>
+                    <td>@Model.NombrePropietario(m.PropietarioId)</td>
+                    <td>
+                        <form method="post" asp-page-handler="CambiarEstadoMascota">
+                            <input type="hidden" name="id" value="@m.Id" />
+                            <select name="nuevoEstado" class="form-control" onchange="this.form.submit()">
+                                @foreach (EstadoMascota e in Enum.GetValues(typeof(EstadoMascota)))
+                                {
+                                    <option value="@e" selected="@(e == m.Estado)">@e</option>
+                                }
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<div class="list-container">
+    <h2>Citas</h2>
+    <table class="table-list">
+        <thead>
+            <tr>
+                <th>Mascota</th>
+                <th>Veterinario</th>
+                <th>Fecha y hora</th>
+                <th>Motivo</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model.Citas)
+            {
+                <tr>
+                    <td>@Model.NombreMascota(c.MascotaId)</td>
+                    <td>@Model.NombreVeterinario(c.VeterinarioId)</td>
+                    <td>@c.FechaHoraAtencion.ToString("dd/MM/yyyy HH:mm")</td>
+                    <td>@c.Motivo</td>
+                    <td>
+                        <form method="post" asp-page-handler="CambiarEstadoCita">
+                            <input type="hidden" name="id" value="@c.Id" />
+                            <select name="nuevoEstado" class="form-control" onchange="this.form.submit()">
+                                @foreach (EstadoCita e in Enum.GetValues(typeof(EstadoCita)))
+                                {
+                                    <option value="@e" selected="@(e == c.Estado)">@e</option>
+                                }
+                            </select>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
 </div>

@@ -1,37 +1,37 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 
 namespace gestion_veterinaria.Pages
 {
     public class PropietariosModel : PageModel
     {
-        private readonly ApplicationDbContext _context;
+        private readonly DataStore _store;
 
-        public PropietariosModel(ApplicationDbContext context)
+        public PropietariosModel(DataStore store)
         {
-            _context = context;
+            _store = store;
         }
 
         [BindProperty]
-        public Propietario Propietario { get; set; }
+        public Propietario Propietario { get; set; } = new();
 
-        // Muestra el formulario vacío
         public void OnGet()
         {
         }
 
-        // Recibe los datos del formulario y los guarda
-        public async Task<IActionResult> OnPostAsync()
+        public IActionResult OnPost()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            _context.Propietarios.Add(Propietario);
-            await _context.SaveChangesAsync();
+            Propietario.Id = _store.SiguientePropietarioId();
+            _store.Propietarios.Add(Propietario);
 
-            return RedirectToPage("./Index"); // o donde quieras redirigir
+            return RedirectToPage("./Index");
         }
     }
 }
