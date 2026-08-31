@@ -1,6 +1,54 @@
 ﻿@page
 @model gestion_veterinaria.Pages.MascotasModel
 @{
-	ViewData["Title"] = "Mascotas";
+    ViewData["Title"] = "Mascotas";
 }
-<h1>@ViewData["Title"]</h1>
+
+<div class="form-container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Mascota.PropietarioId">Propietario</label>
+            <select asp-for="Mascota.PropietarioId" class="form-control"
+                    asp-items="Model.PropietariosSelectList">
+                <option value="">-- Selecciona un propietario --</option>
+            </select>
+            <span asp-validation-for="Mascota.PropietarioId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Mascota.Nombre">Nombre</label>
+            <input asp-for="Mascota.Nombre" class="form-control" />
+            <span asp-validation-for="Mascota.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Mascota.Especie">Especie</label>
+            <input asp-for="Mascota.Especie" class="form-control" />
+            <span asp-validation-for="Mascota.Especie" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Mascota.Raza">Raza</label>
+            <input asp-for="Mascota.Raza" class="form-control" />
+            <span asp-validation-for="Mascota.Raza" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Mascota.FechaNacimiento">Fecha de nacimiento</label>
+            <input asp-for="Mascota.FechaNacimiento" class="form-control" type="date" />
+            <span asp-validation-for="Mascota.FechaNacimiento" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Mascota.Estado">Estado</label>
+            <select asp-for="Mascota.Estado" class="form-control"
+                    asp-items="Html.GetEnumSelectList<EstadoMascota>()">
+            </select>
+            <span asp-validation-for="Mascota.Estado" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Guardar</button>
+    </form>
+</div>

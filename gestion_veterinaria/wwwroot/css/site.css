@@ -29,3 +29,74 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.form-container {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 25px 30px;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.form-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #444;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 0.95rem;
+}
+
+.form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 4px rgba(102, 175, 233, 0.5);
+}
+
+.form-control:disabled {
+    background-color: #f1f1f1;
+    color: #999;
+}
+
+textarea.form-control {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.text-danger {
+    display: block;
+    font-size: 0.85rem;
+    margin-top: 3px;
+}
+
+.btn-primary {
+    background-color: #0d6efd;
+    border: none;
+    padding: 9px 20px;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: #0b5ed7;
+}

@@ -1,6 +1,45 @@
 ﻿@page
 @model gestion_veterinaria.Pages.VeterinariosModel
 @{
-	ViewData["Title"] = "Veterinarios";
+    ViewData["Title"] = "Veterinarios";
 }
-<h1>@ViewData["Title"]</h1>
+
+<div class="form-container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Veterinario.Nombre">Nombre</label>
+            <input asp-for="Veterinario.Nombre" class="form-control" />
+            <span asp-validation-for="Veterinario.Nombre" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Veterinario.Apellidos">Apellidos</label>
+            <input asp-for="Veterinario.Apellidos" class="form-control" />
+            <span asp-validation-for="Veterinario.Apellidos" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Veterinario.Especialidad">Especialidad</label>
+            <input asp-for="Veterinario.Especialidad" class="form-control" />
+            <span asp-validation-for="Veterinario.Especialidad" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Veterinario.Telefono">Teléfono</label>
+            <input asp-for="Veterinario.Telefono" class="form-control" />
+            <span asp-validation-for="Veterinario.Telefono" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Veterinario.Estado">Estado</label>
+            <select asp-for="Veterinario.Estado" class="form-control"
+                    asp-items="Html.GetEnumSelectList<EstadoVeterinario>()">
+            </select>
+            <span asp-validation-for="Veterinario.Estado" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Guardar</button>
+    </form>
+</div>

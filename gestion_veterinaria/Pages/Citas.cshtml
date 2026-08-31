@@ -1,6 +1,74 @@
 ﻿@page
 @model gestion_veterinaria.Pages.CitasModel
 @{
-	ViewData["Title"] = "Citas";
+    ViewData["Title"] = "Citas";
 }
-<h1>@ViewData["Title"]</h1>
+@using gestion_veterinaria.Models
+
+<div class="form-container">
+    <h1>@ViewData["Title"]</h1>
+
+    <form method="post">
+        <div class="form-group">
+            <label asp-for="Cita.MascotaId">Mascota</label>
+            <select asp-for="Cita.MascotaId" class="form-control"
+                    asp-items="Model.MascotasSelectList">
+                <option value="">-- Selecciona una mascota --</option>
+            </select>
+            <span asp-validation-for="Cita.MascotaId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cita.VeterinarioId">Veterinario</label>
+            <select asp-for="Cita.VeterinarioId" class="form-control"
+                    asp-items="Model.VeterinariosSelectList">
+                <option value="">-- Selecciona un veterinario --</option>
+            </select>
+            <span asp-validation-for="Cita.VeterinarioId" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cita.FechaHoraAtencion">Fecha y hora de atención</label>
+            <input asp-for="Cita.FechaHoraAtencion" class="form-control" type="datetime-local" />
+            <span asp-validation-for="Cita.FechaHoraAtencion" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cita.Motivo">Motivo</label>
+            <textarea asp-for="Cita.Motivo" class="form-control"></textarea>
+            <span asp-validation-for="Cita.Motivo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cita.Estado">Estado</label>
+            <select asp-for="Cita.Estado" id="estadoSelect" class="form-control"
+                    asp-items="Html.GetEnumSelectList<EstadoCita>()">
+            </select>
+            <span asp-validation-for="Cita.Estado" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Cita.Diagnostico">Diagnóstico</label>
+            <textarea asp-for="Cita.Diagnostico" id="diagnosticoField" class="form-control"></textarea>
+            <span asp-validation-for="Cita.Diagnostico" class="text-danger"></span>
+        </div>
+
+        <button type="submit" class="btn-primary">Guardar</button>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        const estadoSelect = document.getElementById('estadoSelect');
+        const diagnosticoField = document.getElementById('diagnosticoField');
+
+        function toggleDiagnostico() {
+            const esCompletada = estadoSelect.value === 'Completada';
+            diagnosticoField.disabled = !esCompletada;
+            if (!esCompletada) diagnosticoField.value = '';
+        }
+
+        estadoSelect.addEventListener('change', toggleDiagnostico);
+        toggleDiagnostico(); // estado inicial al cargar
+    </script>
+}
