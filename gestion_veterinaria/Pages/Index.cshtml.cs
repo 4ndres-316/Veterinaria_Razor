@@ -48,7 +48,7 @@ namespace gestion_veterinaria.Pages
             if (cita != null)
             {
                 cita.Estado = nuevoEstado;
-                // Si deja de estar completada, no debería conservar diagnóstico
+
                 if (nuevoEstado != EstadoCita.Completada)
                 {
                     cita.Diagnostico = string.Empty;

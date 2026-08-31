@@ -62,9 +62,9 @@
               "Title": "site.css",
               "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "gestion_veterinaria\\wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\wwwroot\\css\\site.css*",
-              "RelativeToolTip": "gestion_veterinaria\\wwwroot\\css\\site.css*",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAiwI0AAAABAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "gestion_veterinaria\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAI0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
               "WhenOpened": "2026-08-31T19:13:25.372Z",
               "EditorCaption": ""
@@ -79,8 +79,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Index.cshtml.cs",
               "ViewState": "AgIAACQAAAAAAAAAAAAIwDcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T19:10:13.052Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T19:10:13.052Z"
             },
             {
               "$type": "Document",
@@ -92,8 +91,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-31T19:10:06.266Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T19:10:06.266Z"
             },
             {
               "$type": "Document",
@@ -105,8 +103,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Citas.cshtml.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAswD4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T18:31:00.526Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T18:31:00.526Z"
             },
             {
               "$type": "Document",
@@ -118,8 +115,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Citas.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-31T17:27:59.259Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:27:59.259Z"
             },
             {
               "$type": "Document",
@@ -131,8 +127,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Veterinarios.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T18:10:29.412Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T18:10:29.412Z"
             },
             {
               "$type": "Document",
@@ -144,8 +139,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Veterinarios.cshtml",
               "ViewState": "AgIAAAkAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-31T17:27:32.722Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:27:32.722Z"
             },
             {
               "$type": "Document",
@@ -157,8 +151,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Mascotas.cshtml.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAswCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T18:09:43.645Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T18:09:43.645Z"
             },
             {
               "$type": "Document",
@@ -170,8 +163,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Mascotas.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-31T17:27:01.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:27:01.378Z"
             },
             {
               "$type": "Document",
@@ -183,8 +175,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Propietarios.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-08-31T18:06:37.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T18:06:37.068Z"
             },
             {
               "$type": "Document",
@@ -196,8 +187,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\Propietarios.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-08-31T17:25:54.032Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-08-31T17:25:54.032Z"
             }
           ]
         }

@@ -34,7 +34,6 @@ namespace gestion_veterinaria.Pages
                 return Page();
             }
 
-            // Si el estado no es Completada, no debería tener diagnóstico guardado
             if (Cita.Estado != EstadoCita.Completada)
             {
                 Cita.Diagnostico = string.Empty;
