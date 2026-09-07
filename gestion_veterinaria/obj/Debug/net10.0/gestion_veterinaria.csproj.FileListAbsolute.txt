@@ -230,3 +230,4 @@ c:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\bi
 c:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\bin\Debug\net10.0\runtimes\win-x86\native\msalruntime_x86.dll
 c:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\gestion_veterinaria.csproj.AssemblyReference.cache
 c:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\gestion_.0646FECB.Up2Date
+C:\Users\ACER NITRO V 15\source\repos\gestion_veterinaria\gestion_veterinaria\obj\Debug\net10.0\staticwebassets.upToDateCheck.txt

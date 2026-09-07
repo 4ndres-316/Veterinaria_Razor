@@ -3,16 +3,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using gestion_veterinaria.Data;
 using gestion_veterinaria.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace gestion_veterinaria.Pages
 {
     public class MascotasModel : PageModel
     {
-        private readonly DataStore _store;
+        private readonly VeterinariaContext _context;
 
-        public MascotasModel(DataStore store)
+        public MascotasModel(VeterinariaContext context)
         {
-            _store = store;
+            _context = context;
         }
 
         [BindProperty]
@@ -25,27 +26,23 @@ namespace gestion_veterinaria.Pages
             CargarPropietarios();
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
-            foreach (var error in ModelState.Values.SelectMany(v => v.Errors))
-            {
-                Console.WriteLine(error.ErrorMessage);
-            }
             if (!ModelState.IsValid)
             {
                 CargarPropietarios();
                 return Page();
             }
 
-            Mascota.Id = _store.SiguienteMascotaId();
-            _store.Mascotas.Add(Mascota);
+            _context.Mascotas.Add(Mascota);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
 
         private void CargarPropietarios()
         {
-            var propietarios = _store.Propietarios
+            var propietarios = _context.Propietarios
                 .Where(p => p.Estado == EstadoPropietario.Activo)
                 .ToList();
 

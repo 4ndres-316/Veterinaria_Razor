@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 
 namespace gestion_veterinaria.Models
@@ -7,21 +8,41 @@ namespace gestion_veterinaria.Models
     {
         public int Id { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "El propietario es obligatorio")]
         public int PropietarioId { get; set; }
 
         [ValidateNever]
         public Propietario Propietario { get; set; } = null!;
 
-        [Required]
+        [Required(ErrorMessage = "El nombre de la mascota es obligatorio")]
+        [StringLength(100, ErrorMessage = "El nombre no puede superar los 100 caracteres")]
         public string Nombre { get; set; } = string.Empty;
 
+        [Required(ErrorMessage = "Debe indicar la especie")]
+        [StringLength(50, ErrorMessage = "La especie no puede superar los 50 caracteres")]
         public string Especie { get; set; } = string.Empty;
+
+        [StringLength(50, ErrorMessage = "La raza no puede superar los 50 caracteres")]
         public string Raza { get; set; } = string.Empty;
 
         [DataType(DataType.Date)]
+        [PastDate(ErrorMessage = "La fecha de nacimiento debe estar en el pasado")]
         public DateTime FechaNacimiento { get; set; }
 
+        [Required(ErrorMessage = "Debe indicar el estado de la mascota")]
         public EstadoMascota Estado { get; set; }
+    }
+
+    // Validación personalizada
+    public class PastDateAttribute : ValidationAttribute
+    {
+        public override bool IsValid(object? value)
+        {
+            if (value is DateTime fecha)
+            {
+                return fecha <= DateTime.Now;
+            }
+            return false;
+        }
     }
 }

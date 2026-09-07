@@ -3,16 +3,17 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using gestion_veterinaria.Data;
 using gestion_veterinaria.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace gestion_veterinaria.Pages
 {
     public class CitasModel : PageModel
     {
-        private readonly DataStore _store;
+        private readonly VeterinariaContext _context;
 
-        public CitasModel(DataStore store)
+        public CitasModel(VeterinariaContext context)
         {
-            _store = store;
+            _context = context;
         }
 
         [BindProperty]
@@ -26,7 +27,7 @@ namespace gestion_veterinaria.Pages
             CargarCombos();
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
@@ -34,24 +35,25 @@ namespace gestion_veterinaria.Pages
                 return Page();
             }
 
+            // Si cita no completada, no guarda diagnóstico
             if (Cita.Estado != EstadoCita.Completada)
             {
                 Cita.Diagnostico = string.Empty;
             }
 
-            Cita.Id = _store.SiguienteCitaId();
-            _store.Citas.Add(Cita);
+            _context.Citas.Add(Cita);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }
 
         private void CargarCombos()
         {
-            var mascotas = _store.Mascotas
+            var mascotas = _context.Mascotas
                 .Where(m => m.Estado == EstadoMascota.Activo)
                 .ToList();
 
-            var veterinarios = _store.Veterinarios
+            var veterinarios = _context.Veterinarios
                 .Where(v => v.Estado == EstadoVeterinario.Activo)
                 .ToList();
 

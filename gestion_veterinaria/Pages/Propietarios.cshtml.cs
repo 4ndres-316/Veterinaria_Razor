@@ -7,11 +7,11 @@ namespace gestion_veterinaria.Pages
 {
     public class PropietariosModel : PageModel
     {
-        private readonly DataStore _store;
+        private readonly VeterinariaContext _context;
 
-        public PropietariosModel(DataStore store)
+        public PropietariosModel(VeterinariaContext context)
         {
-            _store = store;
+            _context = context;
         }
 
         [BindProperty]
@@ -21,15 +21,15 @@ namespace gestion_veterinaria.Pages
         {
         }
 
-        public IActionResult OnPost()
+        public async Task<IActionResult> OnPostAsync()
         {
             if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            Propietario.Id = _store.SiguientePropietarioId();
-            _store.Propietarios.Add(Propietario);
+            _context.Propietarios.Add(Propietario);
+            await _context.SaveChangesAsync();
 
             return RedirectToPage("./Index");
         }

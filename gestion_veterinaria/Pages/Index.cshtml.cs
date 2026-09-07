@@ -2,49 +2,58 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using gestion_veterinaria.Data;
 using gestion_veterinaria.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace gestion_veterinaria.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly DataStore _store;
+        private readonly VeterinariaContext _context;
 
-        public IndexModel(DataStore store)
+        public IndexModel(VeterinariaContext context)
         {
-            _store = store;
+            _context = context;
         }
 
-        public List<Propietario> Propietarios => _store.Propietarios;
-        public List<Mascota> Mascotas => _store.Mascotas;
-        public List<Cita> Citas => _store.Citas;
+        public List<Propietario> Propietarios { get; set; } = new();
+        public List<Mascota> Mascotas { get; set; } = new();
+        public List<Cita> Citas { get; set; } = new();
 
         public void OnGet()
         {
+            Propietarios = _context.Propietarios.ToList();
+            Mascotas = _context.Mascotas.ToList();
+            Citas = _context.Citas
+                .Include(c => c.Mascota)
+                .Include(c => c.Veterinario)
+                .ToList();
         }
 
-        public IActionResult OnPostCambiarEstadoPropietario(int id, EstadoPropietario nuevoEstado)
+        public async Task<IActionResult> OnPostCambiarEstadoPropietarioAsync(int id, EstadoPropietario nuevoEstado)
         {
-            var propietario = _store.Propietarios.FirstOrDefault(p => p.Id == id);
+            var propietario = await _context.Propietarios.FindAsync(id);
             if (propietario != null)
             {
                 propietario.Estado = nuevoEstado;
+                await _context.SaveChangesAsync();
             }
             return RedirectToPage();
         }
 
-        public IActionResult OnPostCambiarEstadoMascota(int id, EstadoMascota nuevoEstado)
+        public async Task<IActionResult> OnPostCambiarEstadoMascotaAsync(int id, EstadoMascota nuevoEstado)
         {
-            var mascota = _store.Mascotas.FirstOrDefault(m => m.Id == id);
+            var mascota = await _context.Mascotas.FindAsync(id);
             if (mascota != null)
             {
                 mascota.Estado = nuevoEstado;
+                await _context.SaveChangesAsync();
             }
             return RedirectToPage();
         }
 
-        public IActionResult OnPostCambiarEstadoCita(int id, EstadoCita nuevoEstado)
+        public async Task<IActionResult> OnPostCambiarEstadoCitaAsync(int id, EstadoCita nuevoEstado)
         {
-            var cita = _store.Citas.FirstOrDefault(c => c.Id == id);
+            var cita = await _context.Citas.FindAsync(id);
             if (cita != null)
             {
                 cita.Estado = nuevoEstado;
@@ -53,17 +62,19 @@ namespace gestion_veterinaria.Pages
                 {
                     cita.Diagnostico = string.Empty;
                 }
+
+                await _context.SaveChangesAsync();
             }
             return RedirectToPage();
         }
 
         public string NombrePropietario(int id) =>
-            _store.Propietarios.FirstOrDefault(p => p.Id == id)?.Nombre ?? "—";
+            _context.Propietarios.FirstOrDefault(p => p.Id == id)?.Nombre ?? "—";
 
         public string NombreMascota(int id) =>
-            _store.Mascotas.FirstOrDefault(m => m.Id == id)?.Nombre ?? "—";
+            _context.Mascotas.FirstOrDefault(m => m.Id == id)?.Nombre ?? "—";
 
         public string NombreVeterinario(int id) =>
-            _store.Veterinarios.FirstOrDefault(v => v.Id == id)?.Nombre ?? "—";
+            _context.Veterinarios.FirstOrDefault(v => v.Id == id)?.Nombre ?? "—";
     }
 }
