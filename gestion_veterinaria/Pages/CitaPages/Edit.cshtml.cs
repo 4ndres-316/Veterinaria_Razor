@@ -1,5 +1,6 @@
 using gestion_veterinaria.Data;
 using gestion_veterinaria.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -19,6 +20,7 @@ public class EditModel : PageModel
     [BindProperty]
     public Cita Cita { get; set; } = default!;
 
+    [Authorize(Roles = "Admin, Veterinario")]
     public async Task<IActionResult> OnGetAsync(int? id)
     {
         if (id is null)

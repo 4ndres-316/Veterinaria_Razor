@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using gestion_veterinaria.Models;
 using gestion_veterinaria.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
@@ -17,6 +18,7 @@ public class IndexModel : PageModel
 
     public IList<Veterinario> Veterinario { get; set; } = default!;
 
+    [Authorize(Roles = "Admin, Veterinario")]
     public async Task OnGetAsync()
     {
         Veterinario = await _context.Veterinarios.ToListAsync();

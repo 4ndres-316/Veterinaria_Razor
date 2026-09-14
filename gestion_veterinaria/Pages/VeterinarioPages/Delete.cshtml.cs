@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using gestion_veterinaria.Models;
 using gestion_veterinaria.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
@@ -18,6 +19,7 @@ public class DeleteModel : PageModel
     [BindProperty]
     public Veterinario Veterinario { get; set; } = default!;
 
+    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> OnGetAsync(int? id)
     {
         if (id is null)
