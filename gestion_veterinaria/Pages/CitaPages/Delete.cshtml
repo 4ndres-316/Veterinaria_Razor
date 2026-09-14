@@ -13,28 +13,16 @@
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cita.MascotaId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cita.MascotaId)
-        </dd>
-        <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Cita.Mascota)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cita.Mascota)
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Cita.VeterinarioId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cita.VeterinarioId)
+            @Html.DisplayFor(model => model.Cita.Mascota.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Cita.Veterinario)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Cita.Veterinario)
+            @Html.DisplayFor(model => model.Cita.Veterinario.Nombre)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Cita.FechaHoraAtencion)

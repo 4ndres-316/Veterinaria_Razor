@@ -19,6 +19,6 @@ public class IndexModel : PageModel
 
     public async Task OnGetAsync()
     {
-        Mascota = await _context.Mascotas.ToListAsync();
+        Mascota = await _context.Mascotas.Include(m => m.Propietario).ToListAsync();
     }
 }

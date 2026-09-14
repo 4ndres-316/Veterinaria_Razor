@@ -1,8 +1,9 @@
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using gestion_veterinaria.Models;
-using gestion_veterinaria.Data;
 
 namespace gestion_veterinaria.Pages.CitaPages;
 
@@ -31,6 +32,10 @@ public class EditModel : PageModel
             return NotFound();
         }
         Cita = cita;
+
+        ViewData["MascotaId"] = new SelectList(_context.Mascotas, "Id", "Nombre", Cita.MascotaId);
+        ViewData["VeterinarioId"] = new SelectList(_context.Veterinarios, "Id", "Nombre", Cita.VeterinarioId);
+
         return Page();
     }
 

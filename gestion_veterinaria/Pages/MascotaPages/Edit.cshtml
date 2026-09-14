@@ -17,13 +17,11 @@
             <div class="form-group">
                 <span class="text-danger">*</span>
                 <label asp-for="Mascota.PropietarioId" class="control-label"></label>
-                <input asp-for="Mascota.PropietarioId" class="form-control" aria-required="true"/>
+                <select asp-for="Mascota.PropietarioId" class="form-control" aria-required="true"
+                        asp-items="ViewBag.PropietarioId">
+                    <option value="">-- Seleccione un Propietario --</option>
+                </select>
                 <span asp-validation-for="Mascota.PropietarioId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Mascota.Propietario" class="control-label"></label>
-                <input asp-for="Mascota.Propietario" class="form-control" />
-                <span asp-validation-for="Mascota.Propietario" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <span class="text-danger">*</span>
@@ -51,7 +49,10 @@
             <div class="form-group">
                 <span class="text-danger">*</span>
                 <label asp-for="Mascota.Estado" class="control-label"></label>
-                <input asp-for="Mascota.Estado" class="form-control" aria-required="true"/>
+                <select asp-for="Mascota.Estado" class="form-control" aria-required="true"
+                        asp-items="Html.GetEnumSelectList<gestion_veterinaria.Models.EstadoMascota>()">
+                    <option value="">-- Seleccione un Estado --</option>
+                </select>
                 <span asp-validation-for="Mascota.Estado" class="text-danger"></span>
             </div>
             <div class="form-group">

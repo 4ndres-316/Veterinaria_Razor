@@ -19,6 +19,6 @@ public class IndexModel : PageModel
 
     public async Task OnGetAsync()
     {
-        Cita = await _context.Citas.ToListAsync();
+        Cita = await _context.Citas.Include(m => m.Mascota).Include(v => v.Veterinario).ToListAsync();
     }
 }

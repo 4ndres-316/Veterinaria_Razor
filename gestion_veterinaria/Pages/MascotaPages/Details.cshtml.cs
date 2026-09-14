@@ -23,7 +23,7 @@ public class DetailsModel : PageModel
             return NotFound();
         }
 
-        var mascota = await _context.Mascotas.FirstOrDefaultAsync(m => m.Id == id);
+        var mascota = await _context.Mascotas.Include(m => m.Propietario).FirstOrDefaultAsync(m => m.Id == id);
         if (mascota is null)
         {
             return NotFound();

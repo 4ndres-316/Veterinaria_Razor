@@ -25,7 +25,7 @@ public class DeleteModel : PageModel
             return NotFound();
         }
 
-        var cita = await _context.Citas.FirstOrDefaultAsync(m => m.Id == id);
+        var cita = await _context.Citas.Include(m => m.Mascota).Include(m => m.Veterinario).FirstOrDefaultAsync(m => m.Id == id);
         if (cita is null)
         {
             return NotFound();

@@ -1,8 +1,9 @@
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using gestion_veterinaria.Models;
-using gestion_veterinaria.Data;
 
 namespace gestion_veterinaria.Pages.MascotaPages;
 
@@ -31,6 +32,9 @@ public class EditModel : PageModel
             return NotFound();
         }
         Mascota = mascota;
+
+        ViewData["PropietarioId"] = new SelectList(_context.Propietarios, "Id", "Nombre", Mascota.PropietarioId);
+
         return Page();
     }
 

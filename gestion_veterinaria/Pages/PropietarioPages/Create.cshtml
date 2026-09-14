@@ -38,7 +38,10 @@
             <div class="form-group">
                 <span class="text-danger">*</span>
                 <label asp-for="Propietario.Estado" class="control-label"></label>
-                <input asp-for="Propietario.Estado" class="form-control" aria-required="true"/>
+                <select asp-for="Propietario.Estado" class="form-control" aria-required="true"
+                        asp-items="Html.GetEnumSelectList<gestion_veterinaria.Models.EstadoPropietario>()">
+                    <option value="">-- Seleccione un Estado --</option>
+                </select>
                 <span asp-validation-for="Propietario.Estado" class="text-danger"></span>
             </div>
             <div class="form-group">

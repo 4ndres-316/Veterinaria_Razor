@@ -14,9 +14,6 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Mascota[0].PropietarioId)
-            </th>
-            <th>
                 @Html.DisplayNameFor(model => model.Mascota[0].Propietario)
             </th>
             <th>
@@ -41,10 +38,7 @@
 @foreach (var item in Model.Mascota) {
         <tr>
             <td>
-                @Html.DisplayFor(model => item.PropietarioId)
-            </td>
-            <td>
-                @Html.DisplayFor(model => item.Propietario)
+                @Html.DisplayFor(modelItem => item.Propietario.Nombre)
             </td>
             <td>
                 @Html.DisplayFor(model => item.Nombre)

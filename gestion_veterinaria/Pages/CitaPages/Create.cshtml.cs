@@ -1,8 +1,9 @@
+using gestion_veterinaria.Data;
+using gestion_veterinaria.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using gestion_veterinaria.Models;
-using gestion_veterinaria.Data;
 
 namespace gestion_veterinaria.Pages.CitaPages;
 
@@ -17,6 +18,9 @@ public class CreateModel : PageModel
 
     public IActionResult OnGet()
     {
+        ViewData["MascotaId"] = new SelectList(_context.Mascotas, "Id", "Nombre");
+        ViewData["VeterinarioId"] = new SelectList(_context.Veterinarios, "Id", "Nombre");
+
         return Page();
     }
 

@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\pages\\citapages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\pages\\citapages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\models\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\models\\enum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\pages\\mascotapages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\pages\\mascotapages\\details.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\pages\\citapages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\pages\\citapages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|c:\\users\\acer nitro v 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\pages\\mascotapages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0C52BF0B-8E8D-A7D4-A6E5-E1E79C575986}|gestion_veterinaria\\gestion_veterinaria.csproj|solutionrelative:gestion_veterinaria\\pages\\mascotapages\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,40 +31,53 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Cita.cs",
-              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Models\\Cita.cs",
-              "RelativeDocumentMoniker": "gestion_veterinaria\\Models\\Cita.cs",
-              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Models\\Cita.cs",
-              "RelativeToolTip": "gestion_veterinaria\\Models\\Cita.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAA1wA4AAAAFAAAAAAAAAA==",
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml.cs*",
+              "RelativeToolTip": "gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml.cs*",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T23:44:16.544Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Enum.cs",
-              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Models\\Enum.cs",
-              "RelativeDocumentMoniker": "gestion_veterinaria\\Models\\Enum.cs",
-              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Models\\Enum.cs",
-              "RelativeToolTip": "gestion_veterinaria\\Models\\Enum.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAIA0wBkAAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-13T23:45:41.025Z",
+              "WhenOpened": "2026-09-14T01:25:29.083Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Program.cs",
-              "RelativeDocumentMoniker": "gestion_veterinaria\\Program.cs",
-              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Program.cs",
-              "RelativeToolTip": "gestion_veterinaria\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAkAAAAAAAAAA==",
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml",
+              "RelativeDocumentMoniker": "gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml*",
+              "RelativeToolTip": "gestion_veterinaria\\Pages\\CitaPages\\Details.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-14T01:25:41.313Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Details.cshtml.cs",
+              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml.cs",
+              "RelativeDocumentMoniker": "gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml.cs",
+              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml.cs",
+              "RelativeToolTip": "gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBkAAABJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-07T21:32:06.16Z",
+              "WhenOpened": "2026-09-14T01:01:12.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml",
+              "RelativeDocumentMoniker": "gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml",
+              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml",
+              "RelativeToolTip": "gestion_veterinaria\\Pages\\MascotaPages\\Details.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-09-14T01:01:01.834Z",
               "EditorCaption": ""
             }
           ]

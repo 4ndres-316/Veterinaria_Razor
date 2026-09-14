@@ -22,11 +22,8 @@ namespace gestion_veterinaria.Models
 
     public enum EstadoCita
     {
-        [Display(Name = "Pendiente")]
         Pendiente,
-        [Display(Name = "Completada")]
         Completada,
-        [Display(Name = "Cancelada")]
         Cancelada
     }
 }
