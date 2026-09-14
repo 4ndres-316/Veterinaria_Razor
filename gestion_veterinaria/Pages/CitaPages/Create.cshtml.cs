@@ -1,5 +1,6 @@
 using gestion_veterinaria.Data;
 using gestion_veterinaria.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -7,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace gestion_veterinaria.Pages.CitaPages;
 
+[Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
 public class CreateModel : PageModel
 {
     private readonly VeterinariaContext _context;

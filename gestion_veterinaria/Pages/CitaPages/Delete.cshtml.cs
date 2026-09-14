@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.CitaPages;
 
+[Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
 public class DeleteModel : PageModel
 {
     private readonly VeterinariaContext _context;
@@ -19,7 +20,6 @@ public class DeleteModel : PageModel
     [BindProperty]
     public Cita Cita { get; set; } = default!;
 
-    [Authorize(Roles = "Admin, Veterinario")]
     public async Task<IActionResult> OnGetAsync(int? id)
     {
         if (id is null)

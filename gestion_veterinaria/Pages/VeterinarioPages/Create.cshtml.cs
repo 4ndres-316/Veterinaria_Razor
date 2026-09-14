@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
+[Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
 public class CreateModel : PageModel
 {
     private readonly VeterinariaContext _context;
@@ -16,7 +17,6 @@ public class CreateModel : PageModel
         _context = context;
     }
 
-    [Authorize(Roles = "Admin, Veterinario")]
     public IActionResult OnGet()
     {
         return Page();
@@ -25,7 +25,6 @@ public class CreateModel : PageModel
     [BindProperty]
     public Veterinario Veterinario { get; set; } = default!;
 
-    // To protect from overposting attacks, see https://aka.ms/RazorPagesCRUD.
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)

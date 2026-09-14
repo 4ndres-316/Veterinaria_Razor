@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using gestion_veterinaria.Models;
 using gestion_veterinaria.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.PropietarioPages;
 
+[Authorize(Roles = SeedData.RolAdmin)]
 public class DeleteModel : PageModel
 {
     private readonly VeterinariaContext _context;

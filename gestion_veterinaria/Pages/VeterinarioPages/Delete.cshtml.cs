@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
+[Authorize(Roles = SeedData.RolAdmin)]
 public class DeleteModel : PageModel
 {
     private readonly VeterinariaContext _context;
@@ -19,7 +20,6 @@ public class DeleteModel : PageModel
     [BindProperty]
     public Veterinario Veterinario { get; set; } = default!;
 
-    [Authorize(Roles = "Admin")]
     public async Task<IActionResult> OnGetAsync(int? id)
     {
         if (id is null)

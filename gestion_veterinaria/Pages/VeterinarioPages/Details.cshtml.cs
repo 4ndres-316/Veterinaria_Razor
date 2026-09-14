@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
+[Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
 public class DetailsModel : PageModel
 {
     private readonly VeterinariaContext _context;
@@ -17,7 +18,6 @@ public class DetailsModel : PageModel
 
     public Veterinario Veterinario { get; set; } = default!;
 
-    [Authorize(Roles = "Admin, Veterinario")]
     public async Task<IActionResult> OnGetAsync(int? id)
     {
         if (id is null)

@@ -3,9 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using gestion_veterinaria.Data;
 using gestion_veterinaria.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages
 {
+    [Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
     public class IndexModel : PageModel
     {
         private readonly VeterinariaContext _context;

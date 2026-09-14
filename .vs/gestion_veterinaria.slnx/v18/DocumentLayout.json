@@ -58,8 +58,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Data\\ApplicationUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:27:18.076Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:27:18.076Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\CitaPages\\Edit.cshtml.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:18:10.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:18:10.414Z"
             },
             {
               "$type": "Document",
@@ -84,8 +82,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\VeterinarioPages\\Create.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:17:21.644Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:17:21.644Z"
             },
             {
               "$type": "Document",
@@ -97,8 +94,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\VeterinarioPages\\Delete.cshtml.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:17:07.817Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:17:07.817Z"
             },
             {
               "$type": "Document",
@@ -110,8 +106,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\VeterinarioPages\\Details.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:17:00.459Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:17:00.459Z"
             },
             {
               "$type": "Document",
@@ -123,8 +118,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\VeterinarioPages\\Edit.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:16:51.979Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:16:51.979Z"
             },
             {
               "$type": "Document",
@@ -136,8 +130,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\VeterinarioPages\\Index.cshtml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:16:02.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:16:02.665Z"
             },
             {
               "$type": "Document",
@@ -149,8 +142,7 @@
               "RelativeToolTip": "gestion_veterinaria\\Pages\\CitaPages\\Delete.cshtml.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA1wBUAAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-09-14T02:13:11.186Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-09-14T02:13:11.186Z"
             },
             {
               "$type": "Document",
@@ -160,7 +152,7 @@
               "RelativeDocumentMoniker": "gestion_veterinaria\\Program.cs",
               "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\gestion_veterinaria\\gestion_veterinaria\\Program.cs",
               "RelativeToolTip": "gestion_veterinaria\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAwEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-14T02:07:11.141Z",
               "EditorCaption": ""

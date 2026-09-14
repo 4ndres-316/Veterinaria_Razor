@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
+[Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
 public class IndexModel : PageModel
 {
     private readonly VeterinariaContext _context;
@@ -18,7 +19,6 @@ public class IndexModel : PageModel
 
     public IList<Veterinario> Veterinario { get; set; } = default!;
 
-    [Authorize(Roles = "Admin, Veterinario")]
     public async Task OnGetAsync()
     {
         Veterinario = await _context.Veterinarios.ToListAsync();

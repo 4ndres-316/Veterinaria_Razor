@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace gestion_veterinaria.Pages.VeterinarioPages;
 
+[Authorize(Roles = $"{SeedData.RolAdmin}, {SeedData.RolVeterinario}")]
 public class EditModel : PageModel
 {
     private readonly VeterinariaContext _context;
@@ -19,7 +20,6 @@ public class EditModel : PageModel
     [BindProperty]
     public Veterinario Veterinario { get; set; } = default!;
 
-    [Authorize(Roles = "Admin, Veterinario")]
     public async Task<IActionResult> OnGetAsync(int? id)
     {
         if (id is null)
@@ -36,8 +36,6 @@ public class EditModel : PageModel
         return Page();
     }
 
-    // To protect from overposting attacks, enable the specific properties you want to bind to.
-    // For more details, see https://aka.ms/RazorPagesCRUD.
     public async Task<IActionResult> OnPostAsync()
     {
         if (!ModelState.IsValid)
